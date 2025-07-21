@@ -1,0 +1,25 @@
+.btn  
+    display: inline-block
+    padding: 5px 15px
+    text-decoration: none
+    text-transform: uppercase
+    border: none
+    border-radius: 5px
+    color: $text-main
+
+    &:hover, &:focus
+        background: lighten($accent, 20%)
+
+.btn--primary
+    background: $accent
+    border: 1px solid $text-inverse
+
+    &:hover, &:focus
+        background: lighten($accent, 20%)
+
+.btn--secondary
+    border: 1px solid $text-inverse
+    
+    &:hover,
+    &:focus
+        background: $secondary
