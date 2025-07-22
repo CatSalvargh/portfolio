@@ -1,14 +1,5 @@
 $gap: 10px
 $padding: 1rem
-$header-height: 10vh
-$footer-height: max-content
-$main-height: max-content
-$main-width: 100vw
-$left-height: 55vh
-$left-width: 100vw
-$before-height: clamp(700px, 120vw, 1100px)
-$before-x: -40%
-$before-y: -30%
 
 body
     display: grid
@@ -22,51 +13,30 @@ body
     &::before
         content: ''
         width: 40vw
-        height: $before-height
+        height: clamp(700px, 120vw, 1100px)
         background-color: rgb(33, 158, 188)
         position: absolute
         top: 0
         left: 0
-        transform: translateX($before-x) translateY($before-y) rotateZ(50deg)
+        transform: translateX(-42%) translateY(-32%) rotateZ(50deg)
 
 .header
     grid-area: header
-    height: $header-height
+    height: 10vh
 
 .main-container 
     grid-area: main
-    width: 100vw
-    height: $main-height
 
-.side-left 
+.profile-section 
     grid-area: side-left
-    width: left-width
-    height: $left-height
 
 footer 
     grid-area: footer
-    height: $footer-height
     background: $main
     padding: 1rem
 
 @media(max-width: 850px)
-    $header-height: 4vh
-    $footer-height: 30vh
-    $main-height: max-content
-    $main-width: 94vw
-    $before-height: 600px
-    $before-x: -20%
-    $before-y: -20%
-
     body
-        grid-template-columns: 100vw
+        grid-template-columns: 96vw
         grid-template-rows: 0.5fr minmax(max-content, auto)
         grid-template-areas: 'header' 'side-left' 'main' 'footer'
-        padding-left: 0
-
-    .side-left, .main-container
-        height: $main-height
-
-    .main-container, .side-left, .header
-        width: $main-width
-        box-shadow: none

@@ -1,12 +1,11 @@
 .main-container
     display: flex
     flex-direction: column
-    padding: 1.75rem 2.5rem
-    background: transparent
+    padding: 1rem 1rem 4rem 2rem
 
 .main-title
-    font-size: 2.5rem
-    padding-left: 8vw
+    font-size: 2rem
+    padding-left: 10vw
     color: $mutard
     text-shadow: 2px 2px 2px $darkBlue
 
@@ -14,24 +13,31 @@
     display: grid
     grid-template-columns: repeat(3, minmax(auto, 28vw))
     grid-auto-rows: minmax(max-content, auto)
-    place-items: stretch
-    padding: 1rem 4rem
-    gap: calc($gap * 3)
+    padding: 3rem 4rem
+    gap: $gap
+    row-gap: 4rem
 
 .card
-    width: 100%
-    height: 100%
+    width: 90%
     display: grid
     grid-template-columns: min-max(fit-content, 50%) 1fr
     grid-template-rows: minmax(fit-content, 200px) 0.5fr fit-content
     grid-template-areas: 'img img' 'title icons' 'desc desc'
     justify-items: center
-    padding: 0.25rem
-    padding-top: 1rem
+    padding: 1.5rem
     border: 1px solid rgb(240 240 240)
     box-shadow: 3px 3px 15px lightgray
-    gap: calc($gap * 0.9)
-    background: white
+    gap: calc($gap * 2)
+    position: relative
+
+    &::before
+        content: ''
+        position: absolute
+        top: 72%
+        left: 15%
+        width: 70%
+        height: 1.5px
+        background: $mutard
 
 .project-img
     grid-area: img
@@ -43,7 +49,7 @@
     grid-area: title
     font-size: clamp(20px, 1rem, 35px)
     font-family: $bold
-    color: $text-main
+    color: $main
 
 .project-links
     grid-area: icons
@@ -51,6 +57,8 @@
     .icon
         width: 25px
         height: 25px
+        margin-right: $gap
+        opacity: 0.7
 
 .project-desc
     grid-area: desc
@@ -64,16 +72,32 @@
 @media(max-width: 850px)
     .cards-container
         padding: 2rem
+        padding-left: 3rem
         grid-template-columns: repeat(2, 38vw)
         grid-template-rows: minmax(350px, fit-content) 0.5fr fit-content
+        row-gap: 2rem
+        column-gap: 2rem
 
     .project-img
         width: 90%
 
+    .card
+        width: 35vw
+
+        &::before
+            display: none
+
+    .main-title
+        text-align: center
+
 @media(max-width: 650px)
     .cards-container
-        padding: 0
+        padding: 0.5rem 1rem
         gap: cal($gap * 1.15)
         grid-template-columns: 95vw
+
+    .card
+        width: 80vw
+
 
   

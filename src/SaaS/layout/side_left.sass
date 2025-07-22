@@ -1,9 +1,9 @@
 $img-w: clamp(450px, 25vw, 600px) 
 
-.side-left
+.profile-section
     display: grid
     grid-template-columns: max-content auto
-    padding: 2rem 3rem
+    padding: 2rem 1.5rem
     gap: 20px
     font-weight: bolder
 
@@ -13,7 +13,7 @@ $img-w: clamp(450px, 25vw, 600px)
 .name
     position: absolute
     top: 5%
-    left: 2%
+    left: 5%
     font-size: 2rem
     color: $mutard
     text-shadow: 2px 2px 2px $darkBlue
@@ -24,12 +24,10 @@ $img-w: clamp(450px, 25vw, 600px)
     box-shadow: 5px 5px 15px lighten(black, 70%)
 
 .about
-    background: white
     display: flex
     flex-direction: column
     gap: calc($gap * 3)
     padding: 2rem 0 2rem 7vw
-    height: fit-content
     transform: translateX(-7vw) translateY(3vh)
     box-shadow: 5px 5px 15px lighten(black, 70%)
     z-index: 4
@@ -39,59 +37,57 @@ $img-w: clamp(450px, 25vw, 600px)
         font-size: 2.2rem
         text-align: center
         color: $main
-        transform: translateX(-4vw)
+        transform: translateX(-4vw) 
         text-shadow: 3px 3px 5px $darkBlue
         text-shadow: 2px 2px 2px $darkBlue
 
     & p 
         width: 60vw
-        padding-right: calc($padding * 2)
+        padding-right: 2rem
         color: $text-main
 
 .icons
     display: flex
     justify-content: end
     padding-right: 5vw
-    gap: $gap
+    gap: calc($gap * 3)
 
 .icon
     height: 40px
     width: 40px
-
+    opacity: 0.8
 
 @media(max-width: 850px)
-    $img-w: 70vw
+    $img-w: clamp(350px, 70vw, 400px) 
 
-    body
-        padding: 0
-
-    .side-left
+    .profile-section
         grid-template-columns: 1fr
         grid-template-rows: minmax(auto, 300px)
         align-content: start
         justify-items: center
         gap: 0
     
+    .name
+        transform: translateX(8vw)
+        top: 8%
+
     .profile-pic
-        height: 35vh
-        width: auto
-        transform: translateX(-5vw) translateY(3vh)
+        transform: translateY(2vh)
+
+    .about
+        transform: none
 
     .about
         gap: calc($gap * 1.5)
-        padding: 1.5rem 1rem
-        height: max-content
-        transform: translateX(-7vw) translateY(0)
-
-        width: $main-width
+        padding-top: 3rem
+        padding-right: 1.5rem
 
         & h2
             font-size: 1.5rem
-            transform: translateX(0)
 
         p 
             width: 90%
-            padding: 0 0.8rem
+            padding: 1rem 0.75rem
             font-size: 1rem
         
     .icons
@@ -102,6 +98,10 @@ $img-w: clamp(450px, 25vw, 600px)
         height: 30px
         width: 30px
 
-@media(max-width: 400px)
-    .side-left
-        padding-left: 0
+@media(max-width: 600px)
+    $img-w: clamp(250px, 70vw, 350px) 
+    
+    .about p 
+        padding: 0.15rem
+        font-size: 0.75rem
+ 
