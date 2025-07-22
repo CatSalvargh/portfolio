@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="favicon" href="#">
     <title>Document</title>
 </head>
 <body>
+        <h1 class="name">CATHERINE SALVARGH</h1>
         <div class="header">
-            <div class="logo-container">
-                <h1>LOGO</h1>
-            </div>
             <nav id="main-nav" class="nav">
                 <button class="btn nav-btn">Home</button>
                 <button class="btn nav-btn">About</button>
-                <button class="btn nav-btn">Another btn</button>
                 <button class="btn nav-btn">Contact</button>
             </nav>
             <div id="nav-toggle" class="nav-toggle">
@@ -21,14 +19,128 @@
             </div>
         </div>
     <aside class="side-left">
-        <h1>Sidebar Left</h1>
+        <div class="profile-img-name">
+            <picture>
+                <source media="(min-width: 650px)" srcset="./assets/profile_pexels-cottonbro-7609957.JPG" class="profile-pic">
+                <!-- <source media="(min-width: 465px)" srcset="img_car.jpg"> -->
+                <img src="./assets/profile_pexels-cottonbro-7609957.JPG" class="profile-pic">
+            </picture> 
+        </div>
+        <div class="about-container">
+            <div class="about">
+                <h2 class="about-title">About me</h2>
+                <p class="about-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet deserunt, necessitatibus quisquam, similique impedit recusandae fugiat quibusdam nisi voluptate rem quae, aliquam facere nulla. Nisi qui soluta dolorem tempore magni.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt a, deleniti repudiandae nam vero soluta alias eum voluptatem delectus itaque consequatur architecto suscipit maxime, maiores facilis, ipsa molestias? Optio, alias? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </p>
+                <div class="icons">
+                    <img src="./assets/gh.png" alt="github logo" class="icon">
+                    <img src="./assets/fb.png" alt="Facebook logo" class="icon">
+                    <img src="./assets/email.png" alt="email icon" class="icon">
+                </div>
+            </div>
+        </div>
     </aside>
-    <main class="main-container"></main>
-    <aside class="side-right">
-        <h1>Sidebar Right</h1>
-    </aside>
+    <main class="main-container">
+        <h2 class="main-title">MY WORK</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="./assets/resto2.PNG" alt="" class="project-img">
+                <h3 class="project-title">H&C Classics</h3>
+                <div class="project-links">
+                    <img src="./assets/gh.png" alt="github logo" class="icon">
+                    <img src="./assets/open.png" alt="oepn project" class="icon">
+                </div>
+                <p class="project-desc">
+                    This project showcasts an aesthetic form for the Blain Bay classy restaurant.
+                </p>
+            </div>
+            <div class="card">
+                <img src="./assets/hcars.PNG" alt="" class="project-img">
+                <h3 class="project-title">H&C Classics</h3>
+                <div class="project-links">
+                    <img src="./assets/gh.png" alt="github logo" class="icon">
+                    <img src="./assets/open.png" alt="oepn project" class="icon">
+                </div>
+                <p class="project-desc">
+                    A classy website for classic cars rental for events, sport, adventure and more, which offers a wide range of experience packages.
+                </p>
+            </div>  
+            <div class="card">
+                <img src="./assets/resto.PNG" alt="" class="project-img">
+                <h3 class="project-title">H&C Classics</h3>
+                <div class="project-links">
+                    <img src="./assets/gh.png" alt="github logo" class="icon">
+                    <img src="./assets/open.png" alt="oepn project" class="icon">
+                </div>
+                <p class="project-desc">
+                    The Blain Bay is a classy restaurant offering 'haute cuisine' experiences and experiences for its select clients.
+                </p>
+            </div>
+            <div class="card">
+                <img src="./assets/hcars2.PNG" alt="" class="project-img">
+                <h3 class="project-title">H&C Classics</h3>
+                <div class="project-links">
+                    <img src="./assets/gh.png" alt="github logo" class="icon">
+                    <img src="./assets/open.png" alt="oepn project" class="icon">
+                </div>
+                <p class="project-desc">
+                    A classy website for classic cars rental for events, sport, adventure and more, which offers a wide range of experience packages.
+                </p>
+            </div>
+            <div class="card">
+                <img src="./assets/weather.PNG" alt="" class="project-img">
+                <h3 class="project-title">H&C Classics</h3>
+                <div class="project-links">
+                    <img src="./assets/gh.png" alt="github logo" class="icon">
+                    <img src="./assets/open.png" alt="oepn project" class="icon">
+                </div>
+                <p class="project-desc">
+                    Simple, yet powerful weather app conntected to Visual Crossing's weather API for accurate weather data and forecast for any location.
+                </p>
+            </div>
+            <div class="card">
+                <img src="./assets/efisien.PNG" alt="" class="project-img">
+                <h3 class="project-title">H&C Classics</h3>
+                <div class="project-links">
+                    <img src="./assets/gh.png" alt="github logo" class="icon">
+                    <img src="./assets/open.png" alt="oepn project" class="icon">
+                </div>
+                <p class="project-desc">
+                    Handy to-do list app with multiple features for organization and time management
+                </p>
+            </div>
+        </div>
+    </main>
     <footer>
-        Footer
+        <div class="footer-container">
+            <div class="contact-details">
+                <h3 class="contact">Contact me</h3>
+                <p>Let's discuss how I can bring your ideal website to life.</p>
+                <address>
+                    123, One Fancy Street <br>
+                    4578-988 <br>
+                    Paris <br>
+                    France <br>
+                </address>
+                <div class="email-ph">
+                    <p><img src="./assets/ph3.png" alt="a phone icon">  876-234-567</p>
+                    <p><img src="./assets/em2.png" alt="an email icon">  catherine.salvargh@gmail.com</p>
+                </div>
+                <div class="icons">
+                        <img src="./assets/gh.png" alt="github logo" class="icon">
+                        <img src="./assets/fb.png" alt="Facebook logo" class="icon">
+                        <img src="./assets/email.png" alt="email icon" class="icon">
+                </div>
+            </div>
+            <div class="footer-pic-container">
+                <picture>
+                    <source media="(min-width: 850px)" srcset="./assets/footer_large.JPG" class="footer-pic">
+                    <source media="(min-width: 400px)" srcset="./assets/footer_small.JPG" class="footer-pic">
+                    <img src="./assets/footer_small.JPG" alt="contact image a hand holding a phone" class="footer-pic">
+                </picture>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
